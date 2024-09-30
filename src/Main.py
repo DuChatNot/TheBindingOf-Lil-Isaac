@@ -104,4 +104,4 @@ while True:
         if down_movement == False and up_movement == False and left_movement == False and right_movement == False:
             animation_selection = f.select_animation('idle')
 
-    pg.display.update()
+    pg.display.update() ##
