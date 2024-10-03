@@ -3,7 +3,7 @@ import Utils.Constants as c
 
 # --- Image Load ---
 def il(route):
-    return pg.image.load(route)
+    return pg.image.load(route).convert_alpha()
 
 # --- Scale Image
 def scale(image, scale):
@@ -52,3 +52,14 @@ def select_animation(direction = 'idle'):
         return 3
     else:
         return 3
+    
+# --- Flip Img
+
+def flip(img, axis = 'x'):
+
+    if axis == 'x':
+        return pg.transform.flip(img, True, False)
+    elif axis == 'y':
+        return pg.transform.flip(img, False, True)
+    else:
+        return

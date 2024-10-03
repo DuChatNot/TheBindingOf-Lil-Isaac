@@ -18,9 +18,12 @@ WIDTH, HEIGHT = 875, 500
 BACKGROUND = '../Assets/Images/Background/MedievalBackground_B.png'
 WINDOW_ICON = '../Assets/Images/Background/MedievalBackground.png'
 
-     # Character
+# --- Character ---
 CH_HEIGHT = 30
 CH_WIDTH = 30
 
 M_SPEED = 5
 M_SCALE = 0.5
+
+# --- Weapon ---
+WEAPON_SCALE = 0.8

@@ -5,6 +5,7 @@ import Utils.Constants as c
 import Utils.Functions as f
 
 from Entities.MainCharacter import Character
+from Entities.Weapon import Weapon
 
 # --- Game Launch ---
 pg.init()
@@ -33,15 +34,26 @@ right_movement = False
 up_movement = False
 down_movement = False
 
-stand_still = True
+# --- Weaponry --- #
+weapon_img = f.il('./Assets/Images/Weapons/TBoI_Weapon.png')
+s_weapon = f.scale(weapon_img, c.WEAPON_SCALE)
+f_weapon = f.flip(s_weapon)
+weapon = Weapon(f_weapon)
 
 # --- Development --- #
 animation_selection = f.select_animation()
 
 # --- Gameplay ---
 while True:
-    SCREEN.fill(c.DARK_BLUE)
+    #Background:
+    SCREEN.fill(c.GRAY)
+
+    #Draw Main Character
     mainChar.draw(SCREEN)
+
+    #Draw Weapon
+    weapon.update(mainChar)
+    weapon.draw_weapon(SCREEN)
 
     CLOCK.tick(c.FPS)
 

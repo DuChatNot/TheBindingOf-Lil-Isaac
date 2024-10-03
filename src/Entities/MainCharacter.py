@@ -29,7 +29,7 @@ class Character:
         if self.flip:
             screen.blit(flipped_image, self.shape)  # -> ( Que dibujar , En donde dibujar )
         else:
-            screen.blit(self.image, self.shape)  # -> ( Que dibujar , En donde dibujar )
+            screen.blit(self.image, self.shape)
 
         pg.draw.rect(screen, c.YELLOW_MANGO, self.shape, 1)
 
