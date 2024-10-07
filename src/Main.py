@@ -37,8 +37,7 @@ down_movement = False
 # --- Weaponry --- #
 weapon_img = f.il('./Assets/Images/Weapons/TBoI_Weapon.png')
 s_weapon = f.scale(weapon_img, c.WEAPON_SCALE)
-f_weapon = f.flip(s_weapon)
-weapon = Weapon(f_weapon)
+weapon = Weapon(s_weapon) 
 
 # --- Development --- #
 animation_selection = f.select_animation()
@@ -54,6 +53,10 @@ while True:
     #Draw Weapon
     weapon.update(mainChar)
     weapon.draw_weapon(SCREEN)
+
+    #Testing
+
+    # -- --
 
     CLOCK.tick(c.FPS)
 
@@ -116,4 +119,4 @@ while True:
         if down_movement == False and up_movement == False and left_movement == False and right_movement == False:
             animation_selection = f.select_animation('idle')
 
-    pg.display.update() ##
+    pg.display.update()

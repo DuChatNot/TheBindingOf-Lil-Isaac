@@ -18,7 +18,7 @@ def scale(image, scale):
 def create_animations(direction):
     animation = []
     for i in range(1,5):
-        img = il(f'/mnt/c/Users/Andrei/OneDrive/Desktop/Py-Dev/GameDevelopment/FirstProject/src/Assets/Images/Characters/Main/{direction}-{i}.png')
+        img = il(f'/mnt/c/Users/Andrei/OneDrive/Desktop/Py-Dev/GameDevelopment/TheBindingOf-Lil-Isaac/src/Assets/Images/Characters/Main/{direction}-{i}.png')
         s_img = scale(img, c.M_SCALE)
         animation.append(s_img)
     
@@ -62,4 +62,4 @@ def flip(img, axis = 'x'):
     elif axis == 'y':
         return pg.transform.flip(img, False, True)
     else:
-        return
+        return pg.transform.flip(img, False, False)
